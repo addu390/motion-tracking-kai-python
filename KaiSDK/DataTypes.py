@@ -39,30 +39,34 @@ class Gesture(Enum):
     pinch3Begin = 12
     pinch3End = 13
     dialBegin = 14
-    dialEnd	= 15
+    dialEnd = 15
+
 
 class Hand(Enum):
     Left = 0
     Right = 1
+
 
 class Vector3:
     """
     Container to represent accelerometer/gyroscope/magnetometer data
     The attributes x,y,z represent the respective sensor readings
     """
+
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
+
 
 class Quaternion:
     """
     Container to represent Quaternion data.
     The attributes w,x,y,z represent the respective quaternion values.
     """
+
     def __init__(self, w, x, y, z):
         self.w = w
         self.x = x
         self.y = y
         self.z = z
-

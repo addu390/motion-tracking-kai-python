@@ -2,6 +2,7 @@
 Contains classes for different types of events that can be subscribed to from the Kai
 """
 
+
 class GestureEvent:
     """
     Represents a Gesture performed on the kai (for eg: swipeLeft, sideSwipeRight, etc.)
@@ -10,6 +11,7 @@ class GestureEvent:
 
     gesture Enum representing the gesture (Refer to KaiSDK.DataTypes.Gesture)
     """
+
     def __init__(self, gesture):
         self.gesture = gesture
 
@@ -35,6 +37,7 @@ class FingerPositionalEvent:
 
     indexFinger (bool)
     """
+
     def __init__(self, fingers):
         self.fingers = fingers
         self.littleFinger = fingers[0]
@@ -51,6 +54,7 @@ class AccelerometerEvent:
 
     accelerometer Vector3 (Refer to KaiSDK.DataTypes.Vector3)
     """
+
     def __init__(self, accelerometer):
         self.accelerometer = accelerometer
 
@@ -63,6 +67,7 @@ class GyroscopeEvent:
 
     gyroscope Vector3 (Refer to KaiSDK.DataTypes.Vector3)
     """
+
     def __init__(self, gyroscope):
         self.gyroscope = gyroscope
 
@@ -75,6 +80,7 @@ class MagnetometerEvent:
 
     accelerometer Vector3 (Refer to KaiSDK.DataTypes.Vector3)
     """
+
     def __init__(self, magnetometer):
         self.magnetometer = magnetometer
 
@@ -105,6 +111,7 @@ class PYREvent:
 
     roll (float)
     """
+
     def __init__(self, pitch, yaw, roll):
         self.yaw = yaw
         self.pitch = pitch
@@ -119,6 +126,7 @@ class QuaternionEvent:
 
     quaternion Vector3 (Refer to KaiSDK.DataTypes.Quaternion)
     """
+
     def __init__(self, quaternion):
         self.quaternion = quaternion
 

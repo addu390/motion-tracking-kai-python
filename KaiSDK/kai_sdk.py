@@ -19,7 +19,7 @@ class KaiSDK:
 
     def __init__(self):
         self.initialized = False
-        self.authenticated = False
+        self.authenticated = True
         self.running = False
 
     def initialize(self, moduleID, moduleSecret):
