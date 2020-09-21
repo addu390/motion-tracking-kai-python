@@ -6,8 +6,7 @@ from KaiSDK.kai_sdk import KaiSDK
 from KaiSDK.constants import Constants
 
 import websocket
-import threading
-import traceback
+
 
 class WebSocketModule(KaiSDK):
     """
@@ -24,6 +23,7 @@ class WebSocketModule(KaiSDK):
     AnyKai (Kai): Represents All Kais connected. Useful for registering an event listener
     for data from all connected Kais
     """
+
     def __init__(self):
         self.running = False
         self.webSocket = None
@@ -52,5 +52,3 @@ class WebSocketModule(KaiSDK):
 
     def close_connection(self):
         self.webSocket.close()
-
-
