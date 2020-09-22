@@ -1,6 +1,6 @@
-# **Kai Python Package**
+## **Kai Python Package**
 
-## **Setup**
+#### **Setup**
 
 Run the following commands to initialise the project directory
 
@@ -9,50 +9,30 @@ python3 setup.py build
 python3 setup.py install
 ```
 
-## **Module Initialisation**
+#### **Module Initialisation**
 
 a. Make sure the **moduleId** and **moduleSecret** are defined correcty in your program.
 
 ```python
 moduleID = "moduleName"     # Name can be anything
-moduleSecret = "qwerty"     # Leave as is
+moduleSecret = "qwerty"
 ```
-
-You can also create a config.ini file along with the information required in the following format:
-
-```ini
-[MODULE]
-ID = "moduleName"
-SECRET = "qwerty"
-```
-
-You can find an example for this in the examples folder.
-
-b. Make sure the KaiSDK service is running.   
-  
-c. Connect to the KaiSDK Websocket.
+ 
+b. Connect to the KaiSDK Websocket.
 ```python
 module = WebSocketModule()
 success = module.connect(moduleID, moduleSecret)
-
-if not success:
-    print("Unable to authenticate with Kai SDK")
-    exit(1)
 ```
 
-## **Getting Data**
+#### **Accessing Data**
 
-### **Set Capabilities**
+#### **Set Capabilities**
 
 ```python
-# Setting single capability
-module.setCapabilities(module.DefaultKai, KaiCapabilities.AccelerometerData) 
-
-# Setting multiple capabilities
 module.setCapabilities(module.DefaultKai, KaiCapabilities.AccelerometerData | KaiCapabilities.GyroscopeData | KaiCapabilities.PYRData)
 ```
 
-### **Set Listeners**
+#### **Set Listeners**
 
 ```python
 def accelerometerEv(ev):
@@ -63,26 +43,19 @@ def accelerometerEv(ev):
 module.DefaultKai.register_event_listener(Events.AccelerometerEvent, accelerometerEv)
 ```
 
-### **Unset Capabilities**
+#### **Unset Capabilities**
 
 ```python
-# Unsetting single capability 
-module.unsetCapabilities(module.DefaultKai, KaiCapabilities.AccelerometerData)
-
-# Unsetting multiple capabilities
 module.unsetCapabilities(module.DefaultKai, KaiCapabilities.AccelerometerData | KaiCapabilities.GyroscopeData | KaiCapabilities.PYRData)
 ```
 
-## **Closing the Module**
+#### **Closing the Module**
 
 ```python
 module.close()
 ```
 
-
-
-
 Run the example file using the following command
 ```
-python3 Gesture.py
+python3 gesture.py
 ```
