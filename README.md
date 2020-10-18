@@ -6,6 +6,8 @@ KAI Gesture Controller
 InMoov Right Hand
 <img src="https://thenextbigproject.com/wp-content/uploads/2020/10/right-hand-5-finger.jpeg" width="50%" >
 
+More details and Updates on the project MYRO - Using KAI, refer: https://thenextbigproject.com/myro-2-0/
+
 #### **Setup**
 
 Run the following commands to initialise the project directory
