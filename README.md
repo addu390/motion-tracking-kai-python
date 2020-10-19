@@ -1,6 +1,10 @@
 ## **Kai Python Package**
 
-<img src="https://thenextbigproject.com/wp-content/uploads/2020/10/kai-red-band.jpeg" width="40" >
+KAI Gesture Controller
+<img src="https://thenextbigproject.com/wp-content/uploads/2020/10/kai-red-band.jpeg" width="50%" >
+
+InMoov Right Hand
+<img src="https://thenextbigproject.com/wp-content/uploads/2020/10/right-hand-5-finger.jpeg" width="50%" >
 
 #### **Setup**
 
