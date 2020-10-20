@@ -1,5 +1,7 @@
 ## **Kai Python Package**
 
+<img src="https://thenextbigproject.com/wp-content/uploads/2020/10/kai-red-band.jpeg" width="40" >
+
 #### **Setup**
 
 Run the following commands to initialise the project directory
