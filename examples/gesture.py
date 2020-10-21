@@ -8,7 +8,11 @@ def gestureEvent(ev):
 
 
 def accelerometerEv(ev):
+    print("Acce")
     print(ev.accelerometer)
+    print(ev.accelerometer.x)
+    print(ev.accelerometer.y)
+    print(ev.accelerometer.z)
 
 
 def fingerShortcutEv(ev):
@@ -29,8 +33,7 @@ if not success:
     print("Unable to authenticate with Kai SDK")
     exit(1)
 
-module.setCapabilities(module.AnyKai, KaiCapabilities.AccelerometerData |
-                       KaiCapabilities.GestureData |
+module.setCapabilities(module.DefaultKai, KaiCapabilities.AccelerometerData | KaiCapabilities.GestureData |
                        KaiCapabilities.LinearFlickData |
                        KaiCapabilities.FingerShortcutData |
                        KaiCapabilities.PYRData |
@@ -38,7 +41,8 @@ module.setCapabilities(module.AnyKai, KaiCapabilities.AccelerometerData |
                        KaiCapabilities.GyroscopeData |
                        KaiCapabilities.MagnetometerData)
 
-module.AnyKai.register_event_listener(Events.AccelerometerEvent, accelerometerEv)
+# module.AnyKai.register_event_listener(Events.AccelerometerEvent, accelerometerEv)
+module.DefaultKai.register_event_listener(Events.AccelerometerEvent, accelerometerEv)
 module.AnyKai.register_event_listener(Events.GestureEvent, gestureEvent)
 module.AnyKai.register_event_listener(Events.FingerShortcutEvent, fingerShortcutEv)
-module.AnyKai.register_event_listener(Events.GyroscopeEvent, gyroScopeEv)
+module.DefaultKai.register_event_listener(Events.GyroscopeEvent, gyroScopeEv)
